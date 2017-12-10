@@ -1,3 +1,14 @@
+//find and return values from JSON Array
+function searchJSONArray(inputJSONArray, findValue, findKey, returnKey){
+  for(let i = 0, let len = inputJSONArray.length; i < len; i++){
+    if(inputJSONArray[i][findKey] === findValue){
+      return inputJSONArray[i][returnKey];
+    } 
+  }
+  return '';
+}
+
+
 //format of JSON: checksum value, char, bit encoding
 let code39Encoding = [
   { Value:  0 , Char: "0" , Encoding: "101001101101" },
