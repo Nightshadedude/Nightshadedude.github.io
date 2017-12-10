@@ -1,5 +1,53 @@
+//format of JSON: checksum value, char, bit encoding
+let code39Encoding = [
+  { Value:  0 , Char: "0" , Encoding: "101001101101" },
+  { Value:  1 , Char: "1" , Encoding: "110100101011" },
+  { Value:  2 , Char: "2" , Encoding: "101100101011" },
+  { Value:  3 , Char: "3" , Encoding: "110110010101" },
+  { Value:  4 , Char: "4" , Encoding: "101001101011" },
+  { Value:  5 , Char: "5" , Encoding: "110100110101" },
+  { Value:  6 , Char: "6" , Encoding: "101100110101" },
+  { Value:  7 , Char: "7" , Encoding: "101001011011" },
+  { Value:  8 , Char: "8" , Encoding: "110100101101" },
+  { Value:  9 , Char: "9" , Encoding: "101100101101" },
+  { Value:  10 , Char: "A" , Encoding: "110101001011" },
+  { Value:  11 , Char: "B" , Encoding: "101101001011" },
+  { Value:  12 , Char: "C" , Encoding: "110110100101" },
+  { Value:  13 , Char: "D" , Encoding: "101011001011" },
+  { Value:  14 , Char: "E" , Encoding: "110101100101" },
+  { Value:  15 , Char: "F" , Encoding: "101101100101" },
+  { Value:  16 , Char: "G" , Encoding: "101010011011" },
+  { Value:  17 , Char: "H" , Encoding: "110101001101" },
+  { Value:  18 , Char: "I" , Encoding: "101101001101" },
+  { Value:  19 , Char: "J" , Encoding: "101011001101" },
+  { Value:  20 , Char: "K" , Encoding: "110101010011" },
+  { Value:  21 , Char: "L" , Encoding: "101101010011" },
+  { Value:  22 , Char: "M" , Encoding: "110110101001" },
+  { Value:  23 , Char: "N" , Encoding: "101011010011" },
+  { Value:  24 , Char: "O" , Encoding: "110101101001" },
+  { Value:  25 , Char: "P" , Encoding: "101101101001" },
+  { Value:  26 , Char: "Q" , Encoding: "101010110011" },
+  { Value:  27 , Char: "R" , Encoding: "110101011001" },
+  { Value:  28 , Char: "S" , Encoding: "101101011001" },
+  { Value:  29 , Char: "T" , Encoding: "101011011001" },
+  { Value:  30 , Char: "U" , Encoding: "110010101011" },
+  { Value:  31 , Char: "V" , Encoding: "100110101011" },
+  { Value:  32 , Char: "W" , Encoding: "110011010101" },
+  { Value:  33 , Char: "X" , Encoding: "100101101011" },
+  { Value:  34 , Char: "Y" , Encoding: "110010110101" },
+  { Value:  35 , Char: "Z" , Encoding: "100110110101" },
+  { Value:  36 , Char: "-" , Encoding: "100101011011" },
+  { Value:  37 , Char: "." , Encoding: "110010101101" },
+  { Value:  38 , Char: " " , Encoding: "100110101101" }, // Orig Char: “SPACE’
+  { Value:  39 , Char: "$" , Encoding: "100100100101" },
+  { Value:  40 , Char: "/" , Encoding: "100100101001" },
+  { Value:  41 , Char: "+" , Encoding: "100101001001" },
+  { Value:  42 , Char: "%" , Encoding: "101001001001" },
+  { Value:  n/a , Char: "*" , Encoding: "100101101101" }
+]
 
 
+//format of JSON: checksum value, code 128-A char, code 128-B char, code 128-C char, bit encoding
 let code128Encoding = [
   { Value: 0 , A: "SP" , B: "SP" , C: "00" , Encoding: "11011001100"},
   { Value: 1 , A: "!" , B: "!" , C: "01" , Encoding: "11001101100"},
