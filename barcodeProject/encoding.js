@@ -1,6 +1,7 @@
 //find and return values from JSON Array
 function searchJSONArray(inputJSONArray, findValue, findKey, returnKey){
-  for(let i = 0, let len = inputJSONArray.length; i < len; i++){
+  let arrayLength = inputJSONArray.length;
+  for(let i = 0; i < arrayLength; i++){
     if(inputJSONArray[i][findKey] === findValue){
       return inputJSONArray[i][returnKey];
     } 
