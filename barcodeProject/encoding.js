@@ -1,3 +1,16 @@
+//main "app" function
+function barcodeMain(){
+  
+}
+
+function buildInput(){
+  
+}
+
+function buildOutput(){
+  
+}
+
 //find and return values from JSON Array
 function searchJSONArray(inputJSONArray, findValue, findKey, returnKey){
   let arrayLength = inputJSONArray.length;
