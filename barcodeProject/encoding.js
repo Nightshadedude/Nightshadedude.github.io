@@ -16,6 +16,7 @@ function buildOutput(){
 function divWithID(ID){
   var newDiv = document.createElement("div");
   newDiv.setAttribute(ID.toString());
+  return newDiv;
 }
 
 //find and return values from JSON Array
