@@ -1,9 +1,7 @@
 //main "app" function
 function barcodeMain(){
-  let DWI = divWithID(10);
-  //let body = document.getElementsByTagName('body');
-  DWI.innerHTML = "Test";
-  document.body.appendChild(DWI);
+  let appendBody = document.body.innerHTML = "<div>Test</div>";
+  appendBody;
 }
 
 function buildInput(){
@@ -15,9 +13,7 @@ function buildOutput(){
 }
 
 function divWithID(ID){
-  var newDiv = document.createElement("div");
-  newDiv.setAttribute(ID.toString());
-  return newDiv;
+  
 }
 
 //find and return values from JSON Array
