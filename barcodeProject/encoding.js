@@ -2,6 +2,7 @@
 function barcodeMain(){
   let DWI = divWithID(10);
   //let body = document.getElementsByTagName('body');
+  DWI.innerHTML = "Test";
   document.body.appendChild(DWI);
 }
 
