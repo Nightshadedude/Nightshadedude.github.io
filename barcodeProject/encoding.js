@@ -1,19 +1,20 @@
 //main "app" function
 function barcodeMain(){
-  let appendBody = document.body.innerHTML = "<div>Test</div>";
-  appendBody;
+  buildInput();
 }
 
 function buildInput(){
-  
+  elementWithID("span", "input");
+  document.getElementById("input").textContent = "Test text"
 }
 
 function buildOutput(){
   
 }
 
-function divWithID(ID){
-  
+function elementWithID(element, ID){
+  let newElem = document.body.innerHTML = "<" + element + "id = " + ID + "></" + element + ">";
+  return newElem;
 }
 
 //find and return values from JSON Array
@@ -73,7 +74,7 @@ let code39Encoding = [
   { Value:  40 , Char: "/" , Encoding: "100100101001" },
   { Value:  41 , Char: "+" , Encoding: "100101001001" },
   { Value:  42 , Char: "%" , Encoding: "101001001001" },
-  { Value:  n/a , Char: "*" , Encoding: "100101101101" }
+  { Value:  null , Char: "*" , Encoding: "100101101101" }
 ]
 
 
