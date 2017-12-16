@@ -5,7 +5,7 @@ function barcodeMain(){
 
 function buildInput(){
   elementWithID("span", "input");
-  document.getElementById("input").textContent = "Test text";
+  document.getElementById("input").textContent = "Test text"; 
 }
 
 function buildOutput(){
