@@ -5,7 +5,7 @@ function barcodeMain(){
 
 function buildInput(){
   elementWithID("span", "input");
-  document.getElementById("input").textContent = "Test text"; 
+  document.body.getElementById("input").textContent = "Test text"; 
 }
 
 function buildOutput(){
@@ -23,7 +23,7 @@ function searchJSONArray(inputJSONArray, findValue, findKey, returnKey){
   for(let i = 0; i < arrayLength; i++){
     if(inputJSONArray[i][findKey] === findValue){
       return inputJSONArray[i][returnKey];
-    } 
+    }
   }
   return '';
 }
