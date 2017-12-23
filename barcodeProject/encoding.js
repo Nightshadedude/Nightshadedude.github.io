@@ -5,7 +5,7 @@ function barcodeMain(){
 
 function buildInput(){
   elementWithID("span", "input");
-  document.body.getElementById("input").textContent = "Test text"; 
+  document.body.getElementById("input").innerHTML = "Test text"; 
 }
 
 function buildOutput(){
@@ -13,7 +13,8 @@ function buildOutput(){
 }
 
 function elementWithID(element, ID){
-  let newElem = document.body.innerHTML = "<" + element + "id = " + ID + "></" + element + ">";
+  let newElem = document.createElement(element);
+  newElem.id = ID;
   return newElem;
 }
 
