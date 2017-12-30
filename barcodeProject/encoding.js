@@ -3,8 +3,8 @@ function barcodeMain(){
   let newElement = document.createElement('div');
   newElement.setAttribute("id", "test_id");
   let m = document.getElementById("test_id"), c = m.style;
-  c.color = #fff;
-  c.backgroundColor = #000;
+  c.color = "#fff";
+  c.backgroundColor = "#000";
   c.width = "200px";
   c.height = "200px";
   
