@@ -1,11 +1,12 @@
 //main "app" function
 function barcodeMain(){
-  buildInput();
+  let newElement = document.createElement('div');
+  document.body.appendChild(newElement);
+  let newTextNode = document.createTextNode('test text');
+  document.body.appendChild(newTextNode);
 }
 
 function buildInput(){
-  document.body.appendChild(elementWithID("span", "input"));
-  document.body.getElementById("input").innerHTML = "Test text"; 
 }
 
 function buildOutput(){
