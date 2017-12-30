@@ -10,7 +10,7 @@ function barcodeMain(){
   
   document.body.appendChild(newElement);
   //document.body.appendChild(m);
-  let newTextNode = document.createTextNode('test text');
+  let newTextNode = document.createTextNode('test text 2');
   document.body.appendChild(newTextNode);
 }
 
