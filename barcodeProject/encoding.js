@@ -1,6 +1,7 @@
 //main "app" function
 function barcodeMain(){
   let newElement = document.createElement('div');
+  newElement.setAttribute("id", "test_id");
   document.body.appendChild(newElement);
   let newTextNode = document.createTextNode('test text');
   document.body.appendChild(newTextNode);
