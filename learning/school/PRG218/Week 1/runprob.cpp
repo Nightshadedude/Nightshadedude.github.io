@@ -12,7 +12,17 @@ int main()
 {
     float number;
     int divider;
-    divider = 0;
+    divider = 2;
+    
+    /*
+    output with divider = 0:
+        Hi there
+        Please input a number and then hit return
+        1
+        Half of your number is inf
+        
+    I was expecting a divide by zero error, but got an infinite error instead.
+    */
     
     cout << "Hi there" << endl;
     cout << "Please input a number and then hit return" << endl;
