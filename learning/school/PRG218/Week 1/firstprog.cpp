@@ -5,8 +5,9 @@ PRG218
 firstprog.cpp
 */
 
-// needed to perform C++ I/O using namespace std; 
+// needed to perform C++ I/O
 #include <iostream>
+using namespace std; 
 
 int main ()
 {
