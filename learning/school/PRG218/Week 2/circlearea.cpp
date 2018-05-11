@@ -14,9 +14,9 @@ const double PI = 3.14;
 const double RADIUS = 5.4;
 
 int main(){
-    float area; // definition of area of circle
+    int area; // definition of area of circle
     
-    float circumference; // definition of circumference
+    int circumference; // definition of circumference
     
     circumference = 2 * PI * RADIUS; // computes circumference
     
@@ -24,11 +24,21 @@ int main(){
     
     // Fill in the code for the cout statement that will output (with description)
     // the 
-    cout << "Circumference = " << circumference << endl;
+    cout << "Circumference = " << circumference << endl; // Exercise 2
     
     // Fill in the code for the cout statement that will output (with description)
     // the area of the circle
-    cout << "Area = " << area << endl;
+    cout << "Area = " << area << endl; // Exercise 2
+
+    /* Exercise 3
+    As floats:
+    Circumference = 33.912
+    Area = 91.5624
+    
+    As ints:
+    Circumference = 33
+    Area = 91
+    */
     
     return 0; 
 }
