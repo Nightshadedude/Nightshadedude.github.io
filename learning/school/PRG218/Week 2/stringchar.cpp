@@ -24,9 +24,26 @@ int main() {
     // Fill in the code to do the following:
     favoriteSnack = "crackers"; // Assign the value of "crackers" to favoriteSnack
     rating = 'B'; // Assign a grade of 'B' to rating
-    expertRating = 'A'
+    expertRating = 'A';
     numberOfPeople = 250; // Assign the number 250 to the numberOfPeople
     topChoiceTotal = 148; // Assign the number 148 to the topChoiceTotal 
+    
+    /*  Exercise 3:
+        It is not possible to change the FAVORITESODA as it is currently since the "const"
+        indicates that this is a constant, and therefore unchangeable.
+        
+        attempting to change the value of the const variable (or object) will
+        result in an error such as:
+            error: passing ‘const string...FAVORITESODA = "Error";
+    */
+    //   FAVORITESODA = "Error"; //<- this causes the above error
+    
+    /*  Exercise 4:
+        It is possible to continually change the value of favoriteSnack since it
+        standard variable. The following line compiles and the output reflects
+        chips as the value of variable
+    */    
+    //  favoriteSnack = "chips";  //<- this does not cause an error
  
     // Fill in the blanks of the following:
     cout << "The preferred soda is " << FAVORITESODA << endl;
@@ -37,6 +54,5 @@ int main() {
     cout << "The other products were rated no higher than a " << rating << endl; 
 
     return 0;
- 
 } 
  
