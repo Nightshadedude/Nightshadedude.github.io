@@ -14,14 +14,21 @@ dowhile.cpp
 Exercise 1: Fill in the indicated code to complete the above program. Then
 compile and run the program several times with various inputs. Try all the
 possible relevant cases and record your results.
+***Completed missing code
+
 Exercise 2: What do you think will happen if you do not enter A, B, C, D
 or E? Try running the program and inputting another letter.
+***It returns the invalid text "The choice was invalid. Try again please."
+
 Exercise 3: Replace the line
 if (validBeverage == true)
 with the line
 if (validBeverage)
 and run the program again. Are there any differences in the execution of
 the program? Why or why not?
+***Therer is no difference in the execution.  If validBeverage is false,
+then (false == true) evaluates to false, just as false evaluates to false.
+This is the same for true, so either way is acceptable.
 */
 
 #include <iostream>
@@ -62,7 +69,7 @@ int main()
             break;
             default: validBeverage = false;
         }
-        if (validBeverage == true)
+        if (validBeverage)
         {
             cout << "How many cups would you like?" << endl;
             cin >> number; // Fill in the code to read in number
@@ -78,30 +85,30 @@ int main()
 
             // Fill in the code to give the case for tea ( $0.75 a cup)
             case 'b':
-            case 'B': cost = number * 1.0;
+            case 'B': cost = number * .75;
             cout << "The total cost is $ " << cost << endl;
             break;
 
             // Fill in the code to give the case for hot chocolate ($1.25 a cup)
             case 'c':
-            case 'C': cost = number * 1.0;
+            case 'C': cost = number * 1.25;
             cout << "The total cost is $ " << cost << endl;
             break;
 
             // Fill in the code to give the case for cappuccino ($2.50 a cup)
             case 'd':
-            case 'D': cost = number * 1.0;
+            case 'D': cost = number * 2.5;
             cout << "The total cost is $ " << cost << endl;
             break;
 
             case 'e':
             case 'E': cout << " Please come again" << endl;
             break;
-            default:cout << "The choice was invalid."// Fill in the code to write a message
+            default:cout << "The choice was invalid.";// Fill in the code to write a message
             // indicating an invalid selection.
             cout << " Try again please." << endl;
         }
-    } while(beverage != ('e' || 'E'))// Fill in the code to finish the do-while statement with the
+    } while(toupper(beverage) != 'E');// Fill in the code to finish the do-while statement with the
     // condition that beverage does not equal E or e.
     
     return 0;// Fill in the appropriate return statement
