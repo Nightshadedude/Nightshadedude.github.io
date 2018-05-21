@@ -20,6 +20,7 @@ number of hours per day that a given student studies biology as well as
 programming. For each given student include two prompts, one for each
 subject. Have the program print out which subject the student, on average,
 spent the most time on.
+***Completed
 
 */
 
@@ -28,7 +29,7 @@ using namespace std;
 int main()
 {
     int numStudents;
-    float numHours, total, average;
+    float numPrgHours, prgTotal, prgAverage, numBioHours, bioTotal, bioAverage;
     int student,day = 0; // these are the counters for the loops
     cout << "This program will find the average number of hours a day"
     << " that a student spent programming over a long weekend\n\n";
@@ -40,19 +41,40 @@ int main()
         cout << "How many days did student " << student
         << " work over the long weekend?" << endl << endl;
         cin >> numDays;
-        total = 0;
+        prgTotal = 0;
+        bioTotal = 0;
         for(day = 1; day <= numDays; day++)
         {
-            cout << "Please enter the number of hours worked by student "
+            cout << "Please enter the number of programming hours worked by student "
             << student <<" on day " << day << "." << endl;
-            cin >> numHours;
-            total = total + numHours;
+            cin >> numPrgHours;
+            prgTotal = prgTotal + numPrgHours;
+
+            cout << "Please enter the number of biology hours worked by student "
+            << student <<" on day " << day << "." << endl;
+            cin >> numBioHours;
+            bioTotal = bioTotal + numBioHours;
         }
-        average = total / numDays;
+        prgAverage = prgTotal / numDays;
+        bioAverage = bioTotal / numDays;
         cout << endl;
-        cout << "The average number of hours per day spent programming by "
-        << "student " << student << " is " << average
-        << endl << endl << endl;
+        cout << "The average number of hours per day spent programming by ";
+        cout << "student " << student << " is " << prgAverage << endl;
+        cout << "The average number of hours per day spent on biology by ";
+        cout << "student " << student << " is " << bioAverage << endl;
+        
+        if(prgTotal == bioTotal) {
+            cout << "This means the student spent equal time on programming and biology.";
+        }
+        else if(prgTotal > bioTotal){
+            cout << "This means the student spent more time on programming.";
+        }
+        else{
+            cout << "This means the student spent more time on biology.";
+        }
+        
+        
+        cout << endl << endl << endl;
     }   
     return 0;
 }
