@@ -1,25 +1,36 @@
 /*
- * Movie.cpp
+ * myMovie.cpp
  *
- *  Created on: May 23, 2014
- *      Author: Peggy Fisher
+ *  Created on: Week 4
+ *      Author: Eric Landeis
+ *       Class: PRG218
  */
 
-#include "Movie.h"
+#include "myMovie.h"
 #include <iostream>
+#include <ctime>
+
 using namespace std;
+
+time_t t = time(NULL); //gets time from ctime lib
+tm* timePtr = localtime(&t); // sets time to local offset
+int currentYear = timePtr->tm_year + 1900; // year member of time is set as # years since 1900
+
+
 //default constructor
-Movie::Movie() {
+myMovie::myMovie() {
 	movieName = "";
 	year = 1900;
 	rating = "G";
 }
-Movie::Movie(string name, int year, string rating)
+
+myMovie::myMovie(string name, int year, string rating)
 {
-	movieName = name;
-	while(year < 1950 || year > 2014)
+	this->name = name;
+	while(year < 1888 || year > currentYear) //did current year vs 2017 since this should always be present
+	//also changed 1950 to 1888 allow for all films
 	{
-		cout<<"invalid year, please re-enter between 1950 and present: \n";
+		cout<<"invalid year, please re-enter between 1888 and present: \n";
 		cin>>year;
 		cin.ignore();
 	}
@@ -27,37 +38,42 @@ Movie::Movie(string name, int year, string rating)
 	this->rating = rating;
 }
 
-Movie::~Movie() {
+myMovie::~myMovie() {
 	// TODO Auto-generated destructor stub
 }
-string Movie::getName()
+
+string myMovie::getName()
 {
-	return movieName;
+	return name;
 }
-void Movie::setName(string name)
+
+void myMovie::setName(string name)
 {
-	movieName = name;
+	this->name = name;
 }
-int Movie::getYear()
+
+int myMovie::getYear()
 {
 	return year;
 }
-void Movie::setYear(int year)
+
+void myMovie::setYear(int year)
 {
-	while(year < 1950 || year > 2014)
+	while(year < 1888 || year > currentYear)
 	{
-		cout<<"invalid year, please re-enter between 1950 and present: \n";
+		cout<<"invalid year, please re-enter between 1888 and present: \n";
 		cin>>year;
 		cin.ignore();
 	}
 	this->year = year;
 }
-string Movie::getRating()
+
+string myMovie::getRating()
 {
 	return rating;
 }
-void Movie::setRating(string rating)
+
+void myMovie::setRating(string rating)
 {
 	this->rating = rating;
 }
-
