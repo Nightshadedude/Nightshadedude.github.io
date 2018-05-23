@@ -45,13 +45,7 @@ int main()
 		
 		movieArray[i] = tempMovie;
 	}
-	//reminder to self.  change input to loops over array (setting)
-	//add class method to output all data in a formatted way
-	//add loop to main to loop over array and output with new method
-	// http://www.tutorialdost.com/Cpp-Programming-Tutorial/34-Cpp-Class-Array.aspx
-	
 
-	//print out all movies in the array:
 	cout << "Your top " << numMovies << " favorite movies are:" << endl;
 
 	for(int i = 0; i < numMovies; i++)
