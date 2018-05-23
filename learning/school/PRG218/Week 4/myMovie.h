@@ -31,6 +31,8 @@ public:
 	
 	void setRating(string);
 	string getRating();
+	
+	void getAll();
 };
 
 #endif /* MYMOVIE_H_ */
