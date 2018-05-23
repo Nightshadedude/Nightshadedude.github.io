@@ -1,3 +1,14 @@
+/*
+ * favoriteMovies.cpp
+ *
+ *  Created on: Week 4
+ *      Author: Eric Landeis
+ *       Class: PRG218
+ */
+
+// header myMovie.h
+// implementation myMovie.cpp
+ 
 #include <iostream>
 #include "myMovie.h"
 using namespace std;
