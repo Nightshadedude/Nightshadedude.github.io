@@ -8,6 +8,7 @@
 
 #include "myMovie.h"
 #include <iostream>
+#include <string>
 #include <ctime>
 
 using namespace std;
@@ -19,9 +20,9 @@ int currentYear = timePtr->tm_year + 1900; // year member of time is set as # ye
 
 //default constructor
 myMovie::myMovie() {
-	movieName = "";
-	year = 1900;
-	rating = "G";
+	string movieName = "";
+	int year = 1900;
+	string rating = "G";
 }
 
 myMovie::myMovie(string name, int year, string rating)
@@ -30,7 +31,7 @@ myMovie::myMovie(string name, int year, string rating)
 	while(year < 1888 || year > currentYear) //did current year vs 2017 since this should always be present
 	//also changed 1950 to 1888 allow for all films
 	{
-		cout<<"invalid year, please re-enter between 1888 and present: \n";
+		cout<<"invalid year, please re-enter between 1888 and present:" << endl;
 		cin>>year;
 		cin.ignore();
 	}
@@ -61,7 +62,7 @@ void myMovie::setYear(int year)
 {
 	while(year < 1888 || year > currentYear)
 	{
-		cout<<"invalid year, please re-enter between 1888 and present: \n";
+		cout<<"invalid year, please re-enter between 1888 and present:" << endl;
 		cin>>year;
 		cin.ignore();
 	}
@@ -76,4 +77,11 @@ string myMovie::getRating()
 void myMovie::setRating(string rating)
 {
 	this->rating = rating;
+}
+
+void myMovie::getAll()
+{
+	cout << "Movie title: " << name << endl;
+	cout << "It was released in: " << year << endl;
+	cout << "It is rated: " << rating << endl << endl;
 }
