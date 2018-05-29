@@ -1,3 +1,9 @@
+/*
+Eric Landeis
+PRG218
+Week 5
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -33,7 +39,7 @@ class Dog : public Animal
         
         void communicate()
         {
-            cout << "Woof" << endl;
+            cout << "Woof!" << endl;
         }
 };
 
@@ -51,7 +57,7 @@ class Cat : public Animal
         
         void communicate()
         {
-            cout << "Meow" << endl;
+            cout << "Meow!" << endl;
         }
 };
 
@@ -67,6 +73,8 @@ int main()
     Dog ralph;
     ralph.communicate();
     
+     //variable fluffy instead of myAnimal2 for instantiation of the Cat object
+     //per the int main block step.
     Cat fluffy;
     fluffy.communicate();
 
