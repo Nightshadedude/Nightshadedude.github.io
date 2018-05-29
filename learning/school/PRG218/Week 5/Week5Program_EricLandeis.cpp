@@ -13,15 +13,15 @@ class Animal
     public:
     // Constructor
     Animal()
-    { cout << "Animal constructor executing.\n"; }
+    { cout << "Animal constructor executing." << endl; }
 
     // Destructor
     virtual ~Animal()
-    {cout << "Animal destructor executing.\n"; }
+    {cout << "Animal destructor executing." << endl; }
     
     void communicate()
     {
-        cout << "Speak" << endl;
+        cout << "\tSpeak" << endl;
     }
 };
 
@@ -31,15 +31,15 @@ class Dog : public Animal
     public:
         // Constructor
         Dog() : Animal()
-        { cout << "Dog constructor executing.\n"; }
+        { cout << "Dog constructor executing." << endl; }
 
         // Destructor
         ~Dog()
-        { cout << "Dog destructor executing.\n"; }
+        { cout << "Dog destructor executing." << endl; }
         
         void communicate()
         {
-            cout << "Woof!" << endl;
+            cout << "\tWoof!" << endl;
         }
 };
 
@@ -49,15 +49,15 @@ class Cat : public Animal
     public:
         // Constructor
         Cat() : Animal()
-        { cout << "Cat constructor executing.\n"; }
+        { cout << "Cat constructor executing." << endl; }
 
         // Destructor
         ~Cat()
-        { cout << "Cat destructor executing.\n"; }
+        { cout << "Cat destructor executing." << endl; }
         
         void communicate()
         {
-            cout << "Meow!" << endl;
+            cout << "\tMeow!" << endl;
         }
 };
 
