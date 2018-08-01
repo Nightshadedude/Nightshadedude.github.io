@@ -109,6 +109,26 @@
         	  alert(phone1);
       	  }
       	}
+      	
+      	var email1 =  document.getElementById("email1").value; 
+      	if (email1 == "") {
+        	alert("Please enter an email address.");
+        	return false;
+      	}
+      	else 
+      	{ 
+        	var reEmail = new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/);
+        	var reResult = reEmail.test(email1);
+        	if (reResult == false)
+        	{
+          	alert("Please provide a valid email address.");
+          	return false;
+        	}
+        	else 
+        	{
+        	  alert(email1);
+        	}
+      	}
       }
     </script>
   </body>
