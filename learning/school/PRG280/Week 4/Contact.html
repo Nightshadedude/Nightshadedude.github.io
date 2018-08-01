@@ -96,11 +96,12 @@
       	}
       	else 
       	{ 
-        	var rePhone = new RegExp(/\d{3}[\-]\d{3}[\-]\d{4}/);
-        	var reResult = rePhone.test(phone1);
+        	var rePhone1 = new RegExp(/\d{3}[\-]\d{3}[\-]\d{4}/);
+        	var rePhone2 = new RegExp(/\d{9}/); //allow non-dash number entry
+        	var reResult = (rePhone1.test(phone1) || rePhone2.test(phone1)); // test both regex
         	if (reResult == false)
         	{
-          	alert("Please provide a valid phone number in the format of: 222-222-2222.");
+          	alert("Please provide a valid phone number in the format of: 222-222-2222 or 2222222222."); // both formats
           	return false;
         	}
         	else 
@@ -108,7 +109,6 @@
         	  alert(phone1);
       	  }
       	}
-
       }
     </script>
   </body>
