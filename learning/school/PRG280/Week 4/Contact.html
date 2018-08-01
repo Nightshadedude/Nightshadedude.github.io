@@ -71,8 +71,14 @@
     </form>
     <script>
       function validateMyPage() {
-        var firstname1 = document.getElementById("fname1").value;
-        alert(firstname1);
+      var firstname1 = document.getElementById("fname1").value;
+      // if firstname1 is equal to null, the user hasn’t typed anything into this field.
+      	if (firstname1 == "") {
+        	alert("Please enter a first name.");
+      	}
+      	else { 
+      	  alert(firstname1);
+      	}
       }
     </script>
   </body>
