@@ -43,3 +43,8 @@ footer {
 body {
 	background-color: lightsteelblue;
 }
+
+h1 {
+	color: green;
+	font-family: Arial;
+} 
