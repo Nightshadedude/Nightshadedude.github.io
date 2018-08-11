@@ -45,28 +45,22 @@
       </div>
     </form>
 
-    <form id="form2" >
+    <form action="#" method="post" id="form2"  >
       <div class="div2">
         <input type = "text" value = "HTML5 page validation" readonly="readonly" style="border-style:none; color:red;" ><br>
-        
-        <label for="fname2" >First Name:</label><br>
-        <input type="text" name="firstname2" id="fname2"><br>
-        
-        <label for="lname2" >Last Name:</label><br>
-        <input type="text" name="lastname2" id="lname2"><br>
-        
-        <label for="phone2" >Phone (i.e. 123-456-7890):</label><br>
-        <input type="text" name="phone2" id="phone2" placeholder="123-456-7890"><br>
-        
-        <label for="email2" >Email:</label><br>
-        <input type="text" name="email2" id="email2" placeholder="abc@xyz.com"><br>
-        
-        <label for="contactpreference2" >Preferred contact method?</label><br>
-        <input type="radio" name="contactpreference2" value="phone" checked> Phone
-        <input type="radio" name="contactpreference2" value="email"> Email
-        <br><br>
-        
-        <input type="submit" id="Submit2" value="Submit" />
+      	<label for="fname2" >First Name:</label><br>
+      	<input type="text" name="firstname2" id="fname2" required><br>
+      	<label for="lname2" >Last Name:</label><br>
+      	<input type="text" name="lastname2" id="lname2" required><br>
+      	<label for="phone2" >Phone (i.e. 123-456-7890):</label><br>
+      	<input type="tel" name="phone2" id="phone2" placeholder="123-456-7890" pattern='\d{3}[\-]\d{3}[\-]\d{4}' required><br>
+      	<label for="email2" >Email:</label><br>
+      	<input type="email" name="email2" id="email2" placeholder="abc@xyz.com" required><br>
+      	<label for="contactpreference2" >Prefered contact method?</label><br>
+      	<input type="radio" name="contactpreference2" value="phone" checked> Phone
+      	<input type="radio" name="contactpreference2" value="email"> Email
+      	<br><br>
+      	<input type="submit" id="Submit2" value="Submit"  />
       </div>
     </form>
     <script>
