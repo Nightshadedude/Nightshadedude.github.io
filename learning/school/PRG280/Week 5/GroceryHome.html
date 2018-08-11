@@ -59,11 +59,15 @@
       	<option value="yellow">Yellow</option>
       	<option value="red">Red</option>
       </select>
-      </div> 
+      </div>
     </form>
     <script>
       function EmailSignUp() {
         alert("The email format is correct!");
+      }
+      function changeColor(value) {
+      	var myColor = document.getElementById("mySiteColor").value;
+      	document.body.style.color = value;
       }
     </script>
   </body>
