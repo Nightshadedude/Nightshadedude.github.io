@@ -37,5 +37,10 @@ int main()
             keepgoing = false;
         }
     }
+    
+    for (i = 0; i < 10; i++)
+    {
+        cout << "For loop for no reason, iteration # " << i + 1 << endl;
+    }
 	return 0;
 }
